@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     downloadButton.addEventListener("click", function() {
         const link = document.createElement("a");
-        link.href = "Images/Danielle Carvalho_Resume.pdf"; // Adjust to the correct path and file extension
+        link.href = "Images/DanielleCarvalho_Resume.pdf"; // Adjust to the correct path and file extension
         link.target = "_blank"; // Opens in a new tab
         document.body.appendChild(link);
         link.click();
