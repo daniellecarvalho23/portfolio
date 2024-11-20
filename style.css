@@ -1,7 +1,6 @@
 
 
 
-
 html{
     background-color: #dbdbdb;
     background-image: url(Images/Mesh.svg);
@@ -11,35 +10,38 @@ html{
 
 header {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    align-items: center;
 }
 
 body{
     margin-left: 20px;
-    margin-right: 20px;
-    margin-top:40px;
+    margin-right: 40px;
+    margin-top:20px;
+    min-width: 700px;
 }
 
 .logo {
-    width: 400px;
+    width: 350px;
 }
 
 nav {
     font-family: "Readex Pro", serif;
     font-weight:220;
-    font-size: clamp(1rem, 15vw, 1.3rem);;
+    font-size: rem;
+    grid-column: 3;
 }
 
 nav ul{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3,1fr);
     justify-items: center;  
 }
 
 nav ul li {
     list-style-type: none;  
     text-align: center;
-    width: 200px;
+    width: 100%;
 }
 
 nav ul li a:hover {
@@ -47,7 +49,7 @@ nav ul li a:hover {
     background-color: #e7ed73;
     padding: 2px 20px;
     box-shadow: 5px 5px;
-    width: 100px;
+    width: 100%;
     text-align: center;
     cursor: pointer;
 }
@@ -65,8 +67,8 @@ nav ul li a{
     grid-template-columns: 1fr 1fr;
     justify-items: center; 
     gap: 50px;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
 .Landing h1 {
@@ -106,13 +108,11 @@ nav ul li a{
 
 
 .Landing .Image{
-    max-width: 50vw;
-    max-height: 50vw;
-    width: 450px;
-    height: 450px;
+    width: 250px;
+    height: 250px;
     border-radius: 100%;
     object-fit: cover;
-    box-shadow: 20px -15px 0 5px rgb(234, 242,10, 28%), -20px 15px 0 4px #dbdbdb, -20px 15px 0 5px rgb(0,0,0); 
+    box-shadow: 20px -15px 0 1px rgb(234, 242,10, 28%), -20px 15px 0 1px #dbdbdb, -20px 15px 0 2px rgb(0,0,0); 
     margin-right: 60px;
 }
 
@@ -149,7 +149,179 @@ nav ul li a{
 .social-icons::after {
     content: '';
     width: 1px; /* Thickness of the line */
-    height: 150px; /* Height of the line - adjust as needed */
+    height: 100px; /* Height of the line - adjust as needed */
     background-color: #333; /* Line color */
     display: block;
+}
+
+
+
+
+/* Style for the Gallery */
+
+.content-slider {
+    width: 100%; 
+   /* position: relative; */
+    height: 100%;
+    margin-top: 10rem;
+}
+
+.slider-container {
+    /* position: absolute;*/
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(3, .2fr);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.slide {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+
+}
+
+.slide .card {
+    background-color: white;
+    box-shadow: 10px 10px;
+    padding: 0.5rem;
+    overflow: hidden;
+    height: auto;
+    width: 100%;
+}
+
+.card img {
+    width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card div {
+    padding: 1rem;
+    height: auto;
+}
+
+.arrow-left, .arrow-right {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    position: absolute;
+    top: 1150px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.arrow-left:hover, .arrow-right:hover {
+    background-color: white;
+    color: black;
+}
+
+.arrow-left {
+    left: 5em;
+}
+
+.arrow-right {
+     right: 5em;
+}
+
+#moreButton {
+    background-color: white;
+    font-family: "Readex Pro", serif;
+    font-weight: 220;
+    font-size: 15px;
+    padding: 5px 100px;
+    cursor: pointer;
+    margin: 0;
+    margin-top: 30px;
+    width: 100% ;
+}
+
+#moreButton:hover {
+    border: 2px solid black;
+    background-color: #e7ed73;
+    box-shadow: 5px 5px;
+    text-align: center;
+}
+
+.card h2 {
+    font-family: "Readex Pro", serif;
+    font-size: 2.5rem;
+}
+
+
+
+/* Contact Me Section */
+.contactMe{
+    width: 100vw;
+    height: 100vh;
+    margin-top: 10rem;
+}
+
+.contactMe h2 {
+    font-family: "Readex Pro", serif;
+    font-size: 2.5rem;
+    margin-left: 40px;
+}
+
+.contactMe p {
+    margin-left: 40px;
+    font-family: "Readex Pro", serif;
+    font-size: 1rem;
+    margin-left: 40px;
+    font-weight: 100;
+}
+
+.contactMe em {
+    font-weight: 900;
+}
+
+
+
+
+
+
+
+@media screen and (min-width:1000px) {
+
+    nav {
+        font-size: 1.2rem;
+    }
+
+    .Landing .Image{
+        max-width: 50vw;
+        max-height: 50vw;
+        width: 300px;
+        height: 300px;
+        border-radius: 100%;
+        object-fit: cover;
+        box-shadow: 20px -15px 0 5px rgb(234, 242,10, 28%), -20px 15px 0 4px #dbdbdb, -20px 15px 0 5px rgb(0,0,0); 
+        margin-right: 60px;
+    }
+}
+
+
+@media screen and (min-width:1500px) {
+
+    nav {
+        font-size: 1.6rem;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 300px;
+    }
+
 }
