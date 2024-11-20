@@ -264,7 +264,6 @@ nav ul li a{
 
 /* Contact Me Section */
 .contactMe{
-    width: 100vw;
     height: 100vh;
     margin-top: 10rem;
 }
@@ -272,22 +271,58 @@ nav ul li a{
 .contactMe h2 {
     font-family: "Readex Pro", serif;
     font-size: 2.5rem;
-    margin-left: 40px;
+    margin-left: 400px;
 }
 
 .contactMe p {
     margin-left: 40px;
     font-family: "Readex Pro", serif;
     font-size: 1rem;
-    margin-left: 40px;
-    font-weight: 100;
+    margin-left: 400px;
+    font-weight: 300;
 }
 
 .contactMe em {
     font-weight: 900;
+    font-style: normal;
+}
+
+form {
+    font-family: "Readex Pro", serif;
+    margin-top: 5rem;
+    margin-left: 400px;
+    font-weight: 900;
+    font-style: normal;
 }
 
 
+input {
+    width: 50%;
+    height: 30px;
+}
+
+textarea {
+    width: 50%;
+    height: 100px;
+}
+
+.submit {
+    width: 410px;
+    font-family: "Readex Pro", serif;
+    font-weight: 220;
+    font-size: 20px;
+    padding: 5px 50px;
+    cursor: pointer;
+    background-color: white;
+
+}
+
+.submit:hover {
+    border: 2px solid black;
+    background-color: #e7ed73;
+    box-shadow: 5px 5px;
+    text-align: center;
+}
 
 
 
