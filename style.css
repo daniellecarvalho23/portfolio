@@ -6,8 +6,390 @@ html{
     background-image: url(Images/Mesh.svg);
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: "Readex Pro", serif;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
 }
 
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 20px 20px 20px;
+}
+
+main {
+    margin: 20px 20px 20px 20px;
+}
+
+
+.nav-links{
+    display: none;
+
+    @media screen and (min-width:850px) {
+        Display: grid;
+    }
+}
+
+.hamburger {
+    background-color: none;
+    border: none;
+    font-size: 2rem;
+
+    @media screen and (min-width:850px) {
+        Display: none;
+    }
+}
+
+
+.logo {
+    width: 40px;
+}
+
+.logo2 {
+    display: none;
+}
+
+.landing{
+    display: grid;
+    justify-items: center;
+}
+
+.imageProfile {
+    margin-top: 3rem;
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+
+.landing h1 {
+    font-size: 3rem;
+    font-weight: 200;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.landing h1 em {
+    font-size: 6rem;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.landing p {
+    font-size: 1rem;
+    font-weight: 200;
+    margin-bottom: 2rem;
+    margin-right: 30%;
+}
+
+.landing #downloadButton {
+    width: 100%;
+    font-family: "Readex Pro", serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: 5px 50px;
+    background-color: #f2f5b4;
+}
+
+.socialAccount {
+    width: 100%;
+    font-family: "Readex Pro", serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: 5px 50px;
+    margin-top: .5rem;
+    border: solid 2px black;
+}
+
+.socialAccount a {
+    text-decoration: none;
+    color: black;
+}
+
+.social-icons {
+    display: none;
+}
+
+/* Carousel container */
+
+.carousel {
+    margin-top: 8rem;
+}
+
+.carousel h2 {
+    font-size: 2rem;
+}
+
+.content-slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+
+  }
+  
+  /* Slider container */
+  .slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Assuming 3 slides */
+  }
+  
+  /* Individual slides */
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Navigation buttons */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+  }
+  
+  .arrow-left {
+    left: 1rem;
+  }
+  
+  .arrow-right {
+    right: 1rem;
+  }
+  
+  .arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Card styles */
+  .card {
+    width: 100%;
+    height: auto;
+    background: rgb(255,255,255,0.5);
+    border: solid 2px black;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+  
+.card img {
+    width: 300px;
+}
+
+  .card h2 {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+  .card p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.3rem;
+
+}
+  
+  button#moreButton {
+    width: 100%;
+    font-family: "Readex Pro", serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: 5px 50px;
+    margin-top: .5rem;
+    border: solid 2px black;
+    background-color: white;
+}
+  
+
+.contactMe{
+    height: 100vh;
+    margin-top: 4rem;
+    background-color: rgb(255,255,255, 0.7);
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.contactMe h2 {
+    font-family: "Readex Pro", serif;
+    font-size: 2.5rem;
+}
+
+.contactMe p {
+    font-family: "Readex Pro", serif;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.contactMe em {
+    font-weight: 900;
+    font-style: normal;
+}
+
+form {
+    font-family: "Readex Pro", serif;
+    margin-top: 5rem;
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+input {
+    width: 100%;
+    height: 30px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+}
+
+.submit {
+    font-family: "Readex Pro", serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: 5px 50px;
+    cursor: pointer;
+    background-color: white;
+    width: 100%;
+}
+
+
+footer {
+    margin-top: 10rem;
+    background-color: black;
+    height: 50px; 
+    padding: 1rem;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    font-weight: 200;
+}
+
+
+
+/*  RESPONSIVENESS */
+
+
+
+@media screen and (min-width:850px) {
+
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+}
+
+.logo {
+   display: none;
+}
+
+.logo2 {
+    display: block;
+}
+
+    
+nav {
+    font-family: "Readex Pro", serif;
+    font-weight:220;
+    font-size: 1rem;
+    grid-column: 3;
+}
+
+nav ul{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center; 
+}
+
+nav ul li {
+    list-style-type: none;  
+    text-align: center;
+    width: 100%;
+}
+
+nav ul li a{
+    text-decoration: none; 
+    color: black;
+}
+
+.landing .imageProfile  {
+
+    @media screen and (min-width:850px) {
+        box-shadow: 20px -15px 0 1px rgb(234, 242,10, 28%), -20px 15px 0 1px #dbdbdb, -20px 15px 0 2px rgb(0,0,0); 
+        }
+}
+
+.landing .imageProfile.scrolled {
+    box-shadow: 20px -15px 0 4px #dbdbdb, 20px -15px 0 5px rgb(0, 0, 0), -20px 15px 0 5px rgba(234, 242, 10, 0.28);
+}
+
+.landing {
+    font-family: "Readex Pro", serif;
+    margin-top:100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center; 
+    gap: 50px;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel h2 {
+    text-align: center;
+
+}
+
+.header-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    font-size: 24px; /* Adjust the size as needed */
+    margin: 20px 0; /* Adjust spacing */
+}
+
+.header-line::before,
+.header-line::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: black; /* Solid line */
+    margin: 0 10px; /* Spacing around the text */
+}
+
+.header-line {
+    white-space: nowrap;
+}
+
+
+}
+
+
+
+
+
+
+
+/*
 header {
     display: grid;
     grid-template-columns: 1fr 1fr 1.5fr;
@@ -25,39 +407,6 @@ body{
     width: 350px;
 }
 
-nav {
-    font-family: "Readex Pro", serif;
-    font-weight:220;
-    font-size: rem;
-    grid-column: 3;
-}
-
-nav ul{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    justify-items: center;  
-}
-
-nav ul li {
-    list-style-type: none;  
-    text-align: center;
-    width: 100%;
-}
-
-nav ul li a:hover {
-    border: 2px solid black;
-    background-color: #e7ed73;
-    padding: 2px 20px;
-    box-shadow: 5px 5px;
-    width: 100%;
-    text-align: center;
-    cursor: pointer;
-}
-
-nav ul li a{
-    text-decoration: none; 
-    color: black;
-}
 
 .Landing {
 
@@ -139,35 +488,33 @@ nav ul li a{
 
 .social-icons::before {
     content: '';
-    width: 1px; /* Thickness of the line */
-    height: 400px; /* Height of the line - adjust as needed */
-    background-color: #333; /* Line color */
+    width: 1px; 
+    height: 400px; 
+    background-color: #333; 
     display: block;
-    margin-bottom: 10px; /* Space between line and first icon */
+    margin-bottom: 10px; 
 }
 
 .social-icons::after {
     content: '';
-    width: 1px; /* Thickness of the line */
-    height: 100px; /* Height of the line - adjust as needed */
-    background-color: #333; /* Line color */
+    width: 1px; 
+    height: 100px; 
+    background-color: #333; 
     display: block;
 }
 
 
 
 
-/* Style for the Gallery */
+
 
 .content-slider {
     width: 100%; 
-   /* position: relative; */
     height: 100%;
     margin-top: 10rem;
 }
 
 .slider-container {
-    /* position: absolute;*/
     top: 0;
     left: 0;
     display: grid;
@@ -262,7 +609,7 @@ nav ul li a{
 
 
 
-/* Contact Me Section */
+
 .contactMe{
     height: 100vh;
     margin-top: 10rem;
@@ -325,9 +672,6 @@ textarea {
 }
 
 
-
-
-
 @media screen and (min-width:1000px) {
 
     nav {
@@ -360,3 +704,5 @@ textarea {
     }
 
 }
+
+*/

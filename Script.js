@@ -1,19 +1,15 @@
 
+//Bubbles Change With Scroll
 
 
+document.addEventListener("scroll", () => {
+    const profileImage = document.querySelector(".imageProfile");
+    const triggerHeight = 100; // Adjust this value as needed
 
-
-//Bubles Change With Scroll
-
-
-window.addEventListener("scroll", function() {
-    const image = document.querySelector(".Landing .Image");
-    const scrollPoint = 100; // Adjust this value as needed
-
-    if (window.scrollY > scrollPoint) {
-        image.classList.add("scrolled");
+    if (window.scrollY > triggerHeight) {
+        profileImage.classList.add("scrolled");
     } else {
-        image.classList.remove("scrolled");
+        profileImage.classList.remove("scrolled");
     }
 });
 
@@ -34,3 +30,50 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const sliderContainer = document.querySelector(".slider-container");
+    const slides = document.querySelectorAll(".slide");
+    const prevButton = document.querySelector(".arrow-left");
+    const nextButton = document.querySelector(".arrow-right");
+
+    let currentIndex = 0;
+
+    function updateSliderPosition() {
+        const slideWidth = slides[0].clientWidth;
+        sliderContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    }
+
+    prevButton.addEventListener("click", function () {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
+        updateSliderPosition();
+    });
+
+    nextButton.addEventListener("click", function () {
+        currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+        updateSliderPosition();
+    });
+
+    // Adjust the slider position on window resize to maintain alignment
+    window.addEventListener("resize", updateSliderPosition);
+});
+
+
+
+
+//Words limit from carousel
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Select all the paragraphs you want to truncate
+    const paragraphs = document.querySelectorAll(".card p");
+    
+    paragraphs.forEach(paragraph => {
+        const maxWords = 20; // Set the maximum number of words
+        const words = paragraph.textContent.split(" ");
+
+        if (words.length > maxWords) {
+            // Truncate the words and add ellipsis
+            const truncatedText = words.slice(0, maxWords).join(" ") + "...";
+            paragraph.textContent = truncatedText;
+        }
+    });
+});
