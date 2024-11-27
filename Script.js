@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     downloadButton.addEventListener("click", function() {
         const link = document.createElement("a");
-        link.href = "https://cdn.discordapp.com/attachments/799976470893953034/1301726109846732843/DanielleCarvalho_Resume.pdf?ex=67258669&is=672434e9&hm=1597639a1e8c49fc3e2344e0b3abb8f0c1474852fc3ae06fd32de2cba8ae9d57&"; // Adjust to the correct path and file extension
+        link.href = "https://drive.google.com/file/d/19hZnLx4_Oq6lsUHPGNGPubWAQtBMmHEr/view?usp=sharing"; // Adjust to the correct path and file extension
         link.target = "_blank"; // Opens in a new tab
         document.body.appendChild(link);
         link.click();
@@ -77,3 +77,27 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+
+// Form 
+
+function sendEmail(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Capture input values
+    const name = document.getElementById('name').value;
+    const userEmail = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Define recipient email and subject
+    const recipientEmail = "daniellefraga23@gmail.com";
+    const subject = `Message from ${name}`;
+
+    // Create the mailto link
+    const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+      `Name: ${name}\nEmail: ${userEmail}\n\nMessage:\n${message}`
+    )}`;
+
+    // Open the user's email client
+    window.location.href = mailtoLink;
+  }

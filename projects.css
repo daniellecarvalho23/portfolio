@@ -1,0 +1,343 @@
+
+html{
+    background-color: #dbdbdb;
+    background-image: url(Images/Mesh.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Readex Pro", serif;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 20px 20px 20px;
+}
+
+
+
+.nav-links{
+    display: none;
+
+    @media screen and (min-width:850px) {
+        Display: grid;
+    }
+}
+
+.hamburger {
+    background-color: none;
+    border: none;
+    font-size: 2rem;
+
+    @media screen and (min-width:850px) {
+        Display: none;
+    }
+}
+
+
+.logo {
+    width: 40px;
+}
+
+.logo2 {
+    display: none;
+}
+
+main {
+    margin: 100px 20px 20px 20px;
+    display: grid;
+    justify-items: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.projectLogo {
+    width: 200px;
+    margin-bottom: 4rem;
+}
+
+.projectDescription {
+    background-color: rgb(255, 255, 255, 0.5);
+    padding: 2rem;
+    box-shadow: 7px 7px;
+}
+
+.projectDescription h1{
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.projectDescription p{
+    font-weight: 300;
+    font-size: .9rem;
+    line-height: 1.2rem;
+}
+
+
+.problem {
+    margin-top: 2rem;
+    background-color: rgb(255, 255, 255, 0.5);
+    padding: 2rem;
+    box-shadow: 7px 7px;
+}
+
+.problem h1{
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.problem h2{
+    font-weight: 900;
+    font-size: 1rem;
+}
+
+.problem p{
+    font-weight: 300;
+    font-size: .9rem;
+    line-height: 1.2rem;
+}
+
+.solution {
+    margin-top: 2rem;
+    background-color: rgb(255, 255, 255, 0.5);
+    padding: 2rem;
+    box-shadow: 7px 7px;
+}
+
+.solution h1{
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.solution p{
+    font-weight: 300;
+    font-size: .9rem;
+    line-height: 1.2rem;
+}
+
+.mainFeatures {
+    margin-top: 4rem;
+}
+
+
+.header-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    font-size: 24px; /* Adjust the size as needed */
+    margin: 4rem 0 1rem; /* Adjust spacing */
+}
+
+.header-line::before,
+.header-line::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: black; /* Solid line */
+    margin: 0 10px; /* Spacing around the text */
+}
+
+.header-line {
+    white-space: nowrap;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 3rem;
+}
+
+.features h1{
+    font-size: 6rem;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+    align-self: center;
+}
+
+.features h2{
+    font-size: 2rem;
+}
+
+.features p{
+    font-size: .8rem;
+    font-weight: 300;
+}
+
+
+.competitors img {
+    padding: 2rem;
+    width: 100%;
+    background-color: rgb(255, 255, 255, 0.5);
+    padding: 2rem;
+    box-sizing: border-box;
+
+}
+
+.personas img {
+    width: 100%;
+    background-color: rgb(255, 255, 255, 0.5);
+    padding: 2rem;
+    box-sizing: border-box;
+    margin-top: 2rem;
+
+}
+
+.flow img {
+    width: 100%;
+    background-color: rgb(255, 255, 255, 0.5);
+    padding: 2rem;
+    box-sizing: border-box;
+    margin-top: 2rem;
+}
+
+.wireframes img {
+    width: 100%;
+    background-color: rgb(255, 255, 255, 0.5);
+    padding: 2rem;
+    box-sizing: border-box;
+    margin-top: 2rem;
+}
+
+.mockUps img {
+    width: 100%;
+    background-color: rgb(255, 255, 255, 0.5);
+    padding: 2rem;
+    box-sizing: border-box;
+    margin-top: 2rem;
+}
+
+.branding img {
+    width: 100%;
+    background-color: rgb(255, 255, 255, 0.5);
+    padding: 2rem;
+    box-sizing: border-box;
+    margin-top: 2rem;
+}
+
+.team img {
+    width: 100%;
+    background-color: rgb(255, 255, 255, 0.5);
+    padding: 2rem;
+    box-sizing: border-box;
+    margin-top: 2rem;
+}
+
+
+
+
+footer {
+    margin-top: 10rem;
+    background-color: black;
+    height: 50px; 
+    padding: 1rem;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    font-weight: 200;
+}
+
+
+
+@media screen and (min-width:850px) {
+
+
+    
+    .logo {
+       display: none;
+    }
+    
+    .logo2 {
+        display: block;
+    }
+    
+        
+    nav {
+        font-family: "Readex Pro", serif;
+        font-weight:220;
+        font-size: 1rem;
+        grid-column: 3;
+    }
+    
+
+    
+    nav ul li {
+        list-style-type: none;  
+        text-align: center;
+        width: 100%;
+    }
+    
+    nav ul li a{
+        text-decoration: none; 
+        color: black;
+    }
+
+}
+
+
+
+@media screen and (min-width:1000px) { 
+
+
+    
+    .logo {
+        width: 350px;
+    }
+
+
+
+    .nav-links a {
+        background-color: #ffffff;
+        border: 2px solid black;
+        padding: .2rem 1.2rem .2rem 1.2rem;
+    }
+
+
+    .nav-links a:hover {
+        background-color: #e7ed73;
+        box-shadow: 5px 5px;
+    } 
+
+}
+
+
+@media screen and (min-width:1200px) {
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    .nav-links a:focus {
+        background-color: #eaeda5;
+        box-shadow: none;
+    }
+
+    .logo2 {
+        width: 400px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

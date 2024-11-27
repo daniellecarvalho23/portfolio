@@ -12,7 +12,7 @@
     <script src="https://kit.fontawesome.com/d3f3ea6346.js" crossorigin="anonymous"></script> 
 
     <script src="Script.js" type="text/javascript"></script>
-
+    
     <title>Danielle Carvalho</title>
 </head>
 <body>
@@ -25,7 +25,7 @@
                 ☰
               </button>
             <ul class="nav-links">
-                <li> <a href="">About Me</a></li>
+                <li> <a href="aboutme.html">About Me</a></li>
                 <li> <a href="#projects">Projects</a></li>
                 <li> <a href="#contact">Contact Me</a></li>
             </ul>
@@ -34,19 +34,15 @@
     <Main>
         <section class="landing">
                 <img class="imageProfile" src="Images/CAPS_IMG_4659.jpg" alt="">
-            <section>
+            <section class="infoWrap">
                 <h1>Hi! I'm <em>Danielle</em>.</h1>
                 <p>UI/UX designer focused on innovative and functional digital experiences</p>
-                <button id="downloadButton">Download CV</button> 
-                <button class="socialAccount"><a href="https://www.linkedin.com/in/daniellefpcarvalho/">My LinkedIn</a></button>
+                <div class="buttonsWrap">
+                    <button id="downloadButton">Download CV</button> 
+                    <a class="socialAccount" href="https://www.linkedin.com/in/daniellefpcarvalho/">My LinkedIn</a>
+                </div>
             </section>
         </section>
-
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/daniellefpcarvalho/"><img src="Images/Linkedin.svg" alt="LinkedIn"></a>
-            <a href="#"><img src="Images/Instagram.svg" alt="LinkedIn"></a>
-        </div>
-
 
 
         <section class="carousel">
@@ -55,37 +51,41 @@
                 <div class="slider-container">
                     <div class="slide">
                         <div class="card">
-                            <img src="Images/Truvoye.png" alt="Truvoye App Screenshot">
+                            <img class="image1" src="Images/Troutb.png" alt="Truvoye App Screenshot">
+                            <img class="image2" src="Images/Trout.png" alt="Truvoye App Screenshot">
                             <div>
-                                <h2>Truvoye</h2>
-                                <p>The Truvoye web application is a logistics management platform that helps the logistic companies that want to simplify the delivery initiation process by minimizing waiting times for delivery initiation, allowing them to supervise operations quickly, onboard drivers and track orders in real time. Our goal is to produce the best estimates for your delivery needs and provide a definitive user experience that is optimized for the logistics needs.</p>
-                                <button id="moreButton">More</button>
+                                <h2>Trout</h2>
+                                <p>Trout is a navigation web based app designed to keep users safe by providing hazard-free route suggestions based on real-time community reports. With user-based reporting, people can easily mark hazards by location, image, and description, helping others navigate safely. A dedicated government dashboard allows officials to track and respond to reported issues efficiently. By combining community input with smart routing, Trout aims to make daily commutes safer and more informed</p>
+                                <button id="moreButton" onclick="location.href='trout.html'">More</button>
                             </div>
                         </div>
                     </div>
                     <div class="slide">
                         <div class="card">
-                            <img src="Images/Truvoye.png" alt="Truvoye App Screenshot">
+                            <img class="image1" src="Images/Flavorit2.png" alt="Truvoye App Screenshot">
+                            <img class="image2" src="Images/Flavorit1.png" alt="Truvoye App Screenshot">
                             <div>
-                                <h2>Truvoye</h2>
-                                <p>The Truvoye web application is a logistics management platform that helps the logistic companies that want to simplify the delivery initiation process by minimizing waiting times for delivery initiation, allowing them to supervise operations quickly, onboard drivers and track orders in real time. Our goal is to produce the best estimates for your delivery needs and provide a definitive user experience that is optimized for the logistics needs.</p>
-                                <button id="moreButton">More</button>
+                                <h2>FlavorIT!</h2>
+                                <p>FlavorIT! is a mobile app designed to make exploring and sharing culinary products easy and personalized. With advanced AI matching technology, users can search, snap, and scan items to find exact matches, while live translation features enable instant product label interpretation directly from the camera. Users can bookmark favorite products, share product links, personal recipes, and photos with friends, and customize searches by region and culture for a tailored experience. Gamification allows users to earn badges as they complete steps, enhancing engagement, while accessibility features like voice commands, multiple language options, and text-to-speech make the app inclusive and user-friendly for all.</p>
+                                <button id="moreButton" onclick="location.href='flavorit.html'">More</button>
                             </div>
                         </div>
                     </div>
                     <div class="slide">
                         <div class="card">
-                            <img src="Images/Truvoye.png" alt="Truvoye App Screenshot">
+                            <img class="image1" src="Images/Truvoye.png" alt="Truvoye App Screenshot">
+                            <img class="image2" src="Images/TruvoyeHover.png" alt="Truvoye App Screenshot">
                             <div>
                                 <h2>Truvoye</h2> 
                                 <p>The Truvoye web application is a logistics management platform that helps the logistic companies that want to simplify the delivery initiation process by minimizing waiting times for delivery initiation, allowing them to supervise operations quickly, onboard drivers and track orders in real time. Our goal is to produce the best estimates for your delivery needs and provide a definitive user experience that is optimized for the logistics needs.</p>
-                                <button id="moreButton">More</button>
+                                <button id="moreButton" onclick="location.href='truvoye.html'">More</button>
                             </div>
                         </div>
                     </div>
                      <div class="slide">
                         <div class="card">
-                            <img src="Images/Truvoye.png" alt="Truvoye App Screenshot">
+                            <img class="image1" src="Images/Flavorit2.png" alt="Truvoye App Screenshot">
+                            <img class="image2" src="Images/Flavorit1.png" alt="Truvoye App Screenshot">
                             <div>
                                 <h2>Truvoye</h2>
                                 <p>The Truvoye web application is a logistics management platform that helps the logistic companies that want to simplify the delivery initiation process by minimizing waiting times for delivery initiation, allowing them to supervise operations quickly, onboard drivers and track orders in real time. Our goal is to produce the best estimates for your delivery needs and provide a definitive user experience that is optimized for the logistics needs.</p>
@@ -120,30 +120,32 @@
         </section>
         
 
-        <section class="contactMe">
-
-        <h2 id="contact"> Contact Me</h2>
-        <p><em>Phone:</em> +1 (778) 636 5943</p>
-        <p><em>Email:</em> daniellefraga23@gmail.com</p>
-
-        <form action="/submit" method="POST">
-            <div class="inputField">
-            <label for="name">Name:</label><br>
-            <input type="name" id="name" name="name" required><br><br>
+        <section class="contactMe" id="contact">
+            <div>
+              <h2>Contact Me</h2>
+              <p><em>Phone:</em> +1 (778) 636 5943</p>
+              <p><em>Email:</em> daniellefraga23@gmail.com</p>
             </div>
-            <div class="inputField">
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-            </div>
-            <div class="inputField">
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
-            </div>
-
-            <button class="submit" type="submit">Submit</button>
+          
+            <form id="contactForm" onsubmit="sendEmail(event)">
+              <div class="inputField">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+              </div>
+              <div class="inputField">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+              </div>
+              <div class="inputField">
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+              </div>
+          
+              <button class="submit" type="submit">Submit</button>
             </form>
-            
-        </section> 
+            <p id="responseMessage"></p>
+          </section>
+          
     </Main>
 
     <footer> <p>&copy; 2024 Danielle Carvalho. All rights reserved.</p> </footer>

@@ -21,6 +21,11 @@ header {
     margin: 20px 20px 20px 20px;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 main {
     margin: 20px 20px 20px 20px;
 }
@@ -72,6 +77,7 @@ main {
     font-weight: 200;
     margin-top: 2rem;
     margin-bottom: 1rem;
+    line-height: 5rem;
 }
 
 .landing h1 em {
@@ -93,7 +99,12 @@ main {
     font-weight: 300;
     font-size: 1rem;
     padding: 5px 50px;
-    background-color: #f2f5b4;
+    border: solid 2px black;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .socialAccount {
@@ -102,14 +113,16 @@ main {
     font-weight: 300;
     font-size: 1rem;
     padding: 5px 50px;
-    margin-top: .5rem;
     border: solid 2px black;
-}
-
-.socialAccount a {
+    background-color: white;
     text-decoration: none;
     color: black;
+    text-align: center;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
 }
+
 
 .social-icons {
     display: none;
@@ -193,7 +206,21 @@ main {
     width: 300px;
 }
 
-  .card h2 {
+.image2 {
+    display: none;
+}
+
+.card:hover {
+    .image2 {
+        display: block;
+    }
+
+    .image1 {
+        display: none;
+    }
+}
+
+.card h2 {
     font-size: 2rem;
     font-weight: 900;
 }
@@ -214,15 +241,26 @@ main {
     margin-top: .5rem;
     border: solid 2px black;
     background-color: white;
+    cursor: pointer;
+}
+
+#moreButton:hover {
+    border: 2px solid black;
+    background-color: #e7ed73;
+    box-shadow: 5px 5px;
+    text-align: center;
+}
+
+#moreButton:focus {
+    background-color: #eaeda5;
+    box-shadow: none;
 }
   
 
 .contactMe{
-    height: 100vh;
     margin-top: 4rem;
     background-color: rgb(255,255,255, 0.7);
     padding: 2rem;
-    box-sizing: border-box;
 }
 
 .contactMe h2 {
@@ -260,13 +298,15 @@ textarea {
 }
 
 .submit {
+    width: 100%;
     font-family: "Readex Pro", serif;
     font-weight: 300;
     font-size: 1rem;
     padding: 5px 50px;
-    cursor: pointer;
+    margin-top: .5rem;
+    border: solid 2px black;
     background-color: white;
-    width: 100%;
+    cursor: pointer;
 }
 
 
@@ -386,323 +426,269 @@ nav ul li a{
 
 
 
-
-
-
-/*
-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1.5fr;
-    align-items: center;
-}
-
-body{
-    margin-left: 20px;
-    margin-right: 40px;
-    margin-top:20px;
-    min-width: 700px;
-}
-
-.logo {
-    width: 350px;
-}
-
-
-.Landing {
-
-    font-family: "Readex Pro", serif;
-    margin-top:100px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center; 
-    gap: 50px;
-    width: 100%;
-    height: 100%;
-}
-
-.Landing h1 {
-    font-weight:220;
-    margin: 0;
-    margin-left: 60px;
-    font-size: clamp(5rem, 10vw, 40rem);
-}
-
-.Landing em {
-    font-weight:500;
-    font-style: normal;
-}
-
-.Landing p {
-    font-weight:200;
-    font-size: clamp(.5rem, 10vw, 1.4rem);
-    margin-left: 60px;
-
-}
-
-.Landing button {
-    font-family: "Readex Pro", serif;
-    font-weight: 220;
-    font-size: 20px;
-    padding: 5px 50px;
-    margin-left: 60px;
-    cursor: pointer;
-}
-
-.Landing button:hover {
-    border: 2px solid black;
-    background-color: #e7ed73;
-    box-shadow: 5px 5px;
-    text-align: center;
-}
-
-
-.Landing .Image{
-    width: 250px;
-    height: 250px;
-    border-radius: 100%;
-    object-fit: cover;
-    box-shadow: 20px -15px 0 1px rgb(234, 242,10, 28%), -20px 15px 0 1px #dbdbdb, -20px 15px 0 2px rgb(0,0,0); 
-    margin-right: 60px;
-}
-
-.Landing .Image.scrolled {
-    box-shadow: 20px -15px 0 4px #dbdbdb, 20px -15px 0 5px rgb(0, 0, 0), -20px 15px 0 5px rgba(234, 242, 10, 0.28);
-}
-
-
-.social-icons {
-    position: fixed;
-    top: 50%;
-    right: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    transform: translateY(-50%);
-    align-items: center
-}
-
-.social-icons img {
-    width: 32px;
-    height: 32px;
-}
-
-.social-icons::before {
-    content: '';
-    width: 1px; 
-    height: 400px; 
-    background-color: #333; 
-    display: block;
-    margin-bottom: 10px; 
-}
-
-.social-icons::after {
-    content: '';
-    width: 1px; 
-    height: 100px; 
-    background-color: #333; 
-    display: block;
-}
-
-
-
-
-
-
-.content-slider {
-    width: 100%; 
-    height: 100%;
-    margin-top: 10rem;
-}
-
-.slider-container {
-    top: 0;
-    left: 0;
-    display: grid;
-    grid-template-columns: repeat(3, .2fr);
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-}
-
-.slide {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1em;
-
-}
-
-.slide .card {
-    background-color: white;
-    box-shadow: 10px 10px;
-    padding: 0.5rem;
-    overflow: hidden;
-    height: auto;
-    width: 100%;
-}
-
-.card img {
-    width: 250px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.card div {
-    padding: 1rem;
-    height: auto;
-}
-
-.arrow-left, .arrow-right {
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 2.5em;
-    height: 2.5em;
-    position: absolute;
-    top: 1150px;
-    transform: translateY(-50%);
-    font-size: 1em;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.arrow-left:hover, .arrow-right:hover {
-    background-color: white;
-    color: black;
-}
-
-.arrow-left {
-    left: 5em;
-}
-
-.arrow-right {
-     right: 5em;
-}
-
-#moreButton {
-    background-color: white;
-    font-family: "Readex Pro", serif;
-    font-weight: 220;
-    font-size: 15px;
-    padding: 5px 100px;
-    cursor: pointer;
-    margin: 0;
-    margin-top: 30px;
-    width: 100% ;
-}
-
-#moreButton:hover {
-    border: 2px solid black;
-    background-color: #e7ed73;
-    box-shadow: 5px 5px;
-    text-align: center;
-}
-
-.card h2 {
-    font-family: "Readex Pro", serif;
-    font-size: 2.5rem;
-}
-
-
-
-
-.contactMe{
-    height: 100vh;
-    margin-top: 10rem;
-}
-
-.contactMe h2 {
-    font-family: "Readex Pro", serif;
-    font-size: 2.5rem;
-    margin-left: 400px;
-}
-
-.contactMe p {
-    margin-left: 40px;
-    font-family: "Readex Pro", serif;
-    font-size: 1rem;
-    margin-left: 400px;
-    font-weight: 300;
-}
-
-.contactMe em {
-    font-weight: 900;
-    font-style: normal;
-}
-
-form {
-    font-family: "Readex Pro", serif;
-    margin-top: 5rem;
-    margin-left: 400px;
-    font-weight: 900;
-    font-style: normal;
-}
-
-
-input {
-    width: 50%;
-    height: 30px;
-}
-
-textarea {
-    width: 50%;
-    height: 100px;
-}
-
-.submit {
-    width: 410px;
-    font-family: "Readex Pro", serif;
-    font-weight: 220;
-    font-size: 20px;
-    padding: 5px 50px;
-    cursor: pointer;
-    background-color: white;
-
-}
-
-.submit:hover {
-    border: 2px solid black;
-    background-color: #e7ed73;
-    box-shadow: 5px 5px;
-    text-align: center;
-}
-
-
 @media screen and (min-width:1000px) {
 
-    nav {
+
+    
+    .logo {
+        width: 350px;
+    }
+
+
+
+    .nav-links a {
+        background-color: #ffffff;
+        border: 2px solid black;
+        padding: .2rem 1.2rem .2rem 1.2rem;
+    }
+
+
+    .nav-links a:hover {
+        background-color: #e7ed73;
+        box-shadow: 5px 5px;
+    }
+    
+    .landing {
+    
+        font-family: "Readex Pro", serif;
+        margin-top:100px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center; 
+        gap: 50px;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .landing h1 {
+        font-size: clamp(5rem, 1vw, 10rem);
+    }
+    
+    .landing h1 em {
+        font-style: normal;
+        font-size: clamp(6rem, 10vw, 20rem);
+
+    }
+    
+    .landing p {
+        font-weight:200;
+        font-size: clamp(.5rem, 10vw, 1.2rem);
+    
+    }
+    
+   .socialAccount {
+        cursor: pointer;
+    }
+
+    #downloadButton {
+        cursor: pointer;
+    }
+
+    
+    #downloadButton:hover {
+        border: 2px solid black;
+        background-color: #e7ed73;
+        box-shadow: 5px 5px;
+        text-align: center;
+    }
+
+    .socialAccount:hover{
+        border: 2px solid black;
+        background-color: #e7ed73;
+        box-shadow: 5px 5px;
+        text-align: center;
+    }
+    
+
+    .submit:hover {
+        border: 2px solid black;
+        background-color: #e7ed73;
+        box-shadow: 5px 5px;
+        text-align: center;
+    }
+
+    .submit:focus {
+        background-color: #eaeda5;
+        box-shadow: none;
+    }
+
+
+    .landing .imageProfile{
+        max-width: 50vw;
+        max-height: 50vw;
+        width: 400px;
+        height: 400px;
+    }
+
+
+    .content-slider {
+        position: relative;
+        width: 100%;
+        max-width: 1065px;
+        margin: auto;
+        overflow: hidden;
+        margin-top: 5rem;
+    
+      }
+      
+      /* Slider container */
+      .slider-container {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 45%; /* Assuming 3 slides */
+        gap: 1rem;
+      }
+      
+      /* Individual slides */
+      .slide {
+        min-width: 100%;
+        box-sizing: border-box;
+      }
+      
+      /* Navigation buttons */
+      .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 10;
+        border-radius: 50%;
+      }
+      
+      .arrow-left {
+        left: 1.5rem;
+      }
+      
+      .arrow-right {
+        right: 1.5rem;
+      }
+      
+      .arrow:hover {
+        border: 2px solid black;
+        background-color: #e7ed73;
+        box-shadow: 2px 2px;
+        color: black;
+      }
+      
+      /* Card styles */
+      .card {
+        width: 100%;
+        height: auto;
+        background: rgb(255,255,255,0.5);
+        border: solid 2px black;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+      
+    .card img {
+        width: 300px;
+    }
+    
+      .card h2 {
+        font-size: 2rem;
+        font-weight: 900;
+    }
+    
+      .card p {
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1.3rem;
+    
+    }
+
+
+    .contactMe {
+        max-width: 600px;
+        display: grid;
+        margin-top: 8rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+
+
+@media screen and (min-width:1200px) {
+
+    .nav-links a {
         font-size: 1.2rem;
     }
 
-    .Landing .Image{
-        max-width: 50vw;
-        max-height: 50vw;
-        width: 300px;
-        height: 300px;
-        border-radius: 100%;
-        object-fit: cover;
-        box-shadow: 20px -15px 0 5px rgb(234, 242,10, 28%), -20px 15px 0 4px #dbdbdb, -20px 15px 0 5px rgb(0,0,0); 
-        margin-right: 60px;
+    .nav-links a:focus {
+        background-color: #eaeda5;
+        box-shadow: none;
     }
-}
 
-
-@media screen and (min-width:1500px) {
-
-    nav {
-        font-size: 1.6rem;
+    .logo2 {
+        width: 400px;
     }
 
     header {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 300px;
+        grid-template-columns: 1fr 1fr 2fr;
     }
+
+    .content-slider {
+        max-width: 1300px;
+      }
+
+    .slider-container {
+        width: 35%; /* Assuming 3 slides */
+        gap: 1rem;
+      }
+
+
+    .landing #downloadButton {
+            width: 50%;
+            font-size: 1.2rem;
+            margin-bottom: 0;
+    }
+
+
+    #downloadButton:focus {
+        background-color: #eaeda5;
+        box-shadow: none;
+    }
+        
+    .socialAccount {
+            width: 50%;
+            height: auto;
+            margin-top: 0;
+            font-size: 1.2rem;
+            
+    }
+
+    .socialAccount:focus {
+        background-color: #eaeda5;
+        box-shadow: none;
+    }
+
+    .buttonsWrap {
+        display: flex;
+        flex-direction: row;
+        gap: .5rem;
+    }
+
+    .landing h1{
+        line-height: 7rem;
+    }
+
+    .landing {
+        margin-bottom: 10rem;
+    }
+
+    
 
 }
 
-*/
