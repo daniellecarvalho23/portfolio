@@ -43,6 +43,8 @@ main {
     background-color: none;
     border: none;
     font-size: 2rem;
+    color: black;
+    padding: 0 .3rem 0 .3rem;
 
     @media screen and (min-width:850px) {
         Display: none;
@@ -242,6 +244,7 @@ main {
     border: solid 2px black;
     background-color: white;
     cursor: pointer;
+    color: black;
 }
 
 #moreButton:hover {
@@ -272,6 +275,10 @@ main {
     font-family: "Readex Pro", serif;
     font-size: 1rem;
     font-weight: 300;
+}
+
+.contactMe p a {
+    color: black;
 }
 
 .contactMe em {
@@ -307,6 +314,7 @@ textarea {
     border: solid 2px black;
     background-color: white;
     cursor: pointer;
+    color: black;
 }
 
 
