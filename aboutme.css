@@ -132,13 +132,7 @@ nav {
     font-family: "Readex Pro", serif;
     font-weight:220;
     font-size: 1rem;
-    grid-column: 3;
-}
-
-nav ul{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    justify-items: center; 
+    grid-column: 4;
 }
 
 nav ul li {
