@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     downloadButton.addEventListener("click", function() {
         const link = document.createElement("a");
-        link.href = "https://drive.google.com/file/d/19hZnLx4_Oq6lsUHPGNGPubWAQtBMmHEr/view?usp=sharing"; // Adjust to the correct path and file extension
+        link.href = "https://drive.google.com/file/d/1mNi_n3axPYoQ6ZH-fIgRDDcVV5nn4UcN/view?usp=sharing"; // Adjust to the correct path and file extension
         link.target = "_blank"; // Opens in a new tab
         document.body.appendChild(link);
         link.click();
